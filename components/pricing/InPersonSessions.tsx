@@ -58,13 +58,13 @@ export function InPersonSessions() {
   const { inPerson } = packagesContent;
 
   return (
-    <div className="rounded-md bg-purple p-11">
-      <h2 className="mb-8 text-[26px] font-extrabold">
+    <div className="rounded-md bg-purple p-6 sm:p-8 lg:p-11">
+      <h2 className="mb-6 text-[clamp(22px,4vw,26px)] font-extrabold sm:mb-8">
         {inPerson.title}{" "}
         <span className="text-gold">{inPerson.titleAccent}</span>{" "}
         {inPerson.titleSuffix}
       </h2>
-      <div className="grid grid-cols-[220px_1fr_1fr] gap-10 max-nav:grid-cols-1">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[220px_1fr_1fr] lg:gap-10">
         <div className="rounded-md border border-gold-soft bg-dark p-6 text-center">
           <div className="mb-2.5 text-[13px] text-muted underline underline-offset-[3px]">
             {inPerson.sessionPrice.label}

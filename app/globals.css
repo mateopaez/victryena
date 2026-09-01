@@ -18,13 +18,7 @@
   --font-body: var(--font-montserrat), "Helvetica Neue", Arial, sans-serif;
 
   /* Layout */
-  --spacing-container: 2.5rem;
-  --spacing-container-nav: 1.75rem;
   --width-site: 81.25rem;
-
-  /* Breakpoints matching the original mockup */
-  --breakpoint-nav: 61.25rem;
-  --breakpoint-xs: 37.5rem;
 }
 
 @layer base {
@@ -33,7 +27,7 @@
   }
 
   body {
-    @apply bg-dark text-white font-body font-light leading-[1.55] antialiased;
+    @apply bg-dark text-white font-body font-light leading-[1.55] antialiased overflow-x-hidden;
   }
 
   h1,
@@ -56,11 +50,15 @@
 
 @layer components {
   .site-wrap {
-    @apply mx-auto w-full max-w-(--width-site) px-(--spacing-container) max-nav:px-(--spacing-container-nav);
+    @apply mx-auto w-full max-w-(--width-site) px-5 sm:px-7 lg:px-10;
   }
 
   .section-pad {
-    @apply py-[100px] max-nav:py-[72px];
+    @apply py-14 sm:py-16 lg:py-[100px];
+  }
+
+  .section-heading {
+    @apply text-[clamp(28px,5vw,40px)] font-extrabold;
   }
 
   .hero-gradient {

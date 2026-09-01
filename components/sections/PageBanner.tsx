@@ -13,7 +13,7 @@ export function PageBanner({
   title,
   description,
   tag,
-  className = "hero-gradient pb-[30px] pt-20 text-center",
+  className = "hero-gradient pb-6 pt-10 text-center sm:pb-[30px] sm:pt-14 lg:pt-20",
 }: PageBannerProps) {
   return (
     <section className={className}>

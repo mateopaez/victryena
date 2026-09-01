@@ -9,9 +9,9 @@ import { SocialIcons } from "./SocialIcons";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/8 bg-dark-soft pb-[34px] pt-[70px]">
+    <footer className="border-t border-white/8 bg-dark-soft pb-8 pt-12 sm:pb-[34px] sm:pt-[70px]">
       <div className="site-wrap">
-        <div className="mb-14 grid grid-cols-[1.3fr_1fr_1fr] gap-10 max-nav:grid-cols-2 max-xs:grid-cols-1">
+        <div className="mb-10 grid grid-cols-1 gap-8 sm:mb-14 sm:grid-cols-2 sm:gap-10 lg:grid-cols-[1.3fr_1fr_1fr]">
           <div>
             <Link
               href="/"
@@ -67,7 +67,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/8 pt-7 text-[13px] opacity-70 max-xs:flex-col max-xs:items-start">
+        <div className="flex flex-col items-start gap-4 border-t border-white/8 pt-6 text-[13px] opacity-70 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:pt-7">
           <span>© 2026 Victryena. Trans Joy is Trans Strength.</span>
           <SocialIcons variant="footer" />
         </div>

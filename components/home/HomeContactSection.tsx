@@ -16,7 +16,7 @@ export function HomeContactSection() {
           media={<PlaceholderImage label={contact.imageLabel} />}
         >
           <Eyebrow>{contact.eyebrow}</Eyebrow>
-          <h2 className="mb-4 text-[38px] font-extrabold">{contact.title}</h2>
+          <h2 className="section-heading mb-4">{contact.title}</h2>
           <p className="mb-9 max-w-[460px] text-base font-light text-muted">
             {contact.description}
           </p>

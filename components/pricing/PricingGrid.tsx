@@ -3,7 +3,7 @@ import { PriceCard } from "./PriceCard";
 
 export function PricingGrid() {
   return (
-    <div className="mx-auto grid grid-cols-3 items-stretch gap-7 max-nav:max-w-[460px] max-nav:grid-cols-1">
+    <div className="mx-auto grid grid-cols-1 items-stretch gap-6 sm:max-w-[460px] lg:max-w-none lg:grid-cols-3 lg:gap-7">
       {pricingTiers.map((tier) => (
         <PriceCard key={tier.name} tier={tier} />
       ))}

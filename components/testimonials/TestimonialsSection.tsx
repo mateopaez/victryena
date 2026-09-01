@@ -7,14 +7,14 @@ export function TestimonialsSection() {
   return (
     <section className="section-pad text-center">
       <div className="site-wrap">
-        <div className="mx-auto mb-[70px] max-w-[720px]">
+        <div className="mx-auto mb-10 max-w-[720px] sm:mb-[70px]">
           <span className="mb-[18px] block text-sm font-semibold uppercase tracking-[0.18em] opacity-85">
             {eyebrow}
           </span>
-          <h2 className="mb-5 text-[40px] font-extrabold">{title}</h2>
+          <h2 className="section-heading mb-5">{title}</h2>
           <p className="text-base font-light text-muted">{description}</p>
         </div>
-        <div className="grid grid-cols-3 gap-10 text-left max-nav:grid-cols-1 max-nav:gap-8">
+        <div className="grid grid-cols-1 gap-6 text-left sm:gap-8 lg:grid-cols-3 lg:gap-10">
           {testimonials.map((testimonial) => (
             <TestimonialCard
               key={testimonial.name + testimonial.quote.slice(0, 20)}

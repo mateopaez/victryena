@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Caveat, Montserrat } from "next/font/google";
 import "./globals.css";
 
@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   },
   description:
     "Gender-affirming personal training and online coaching for gender-diverse individuals in Vancouver, BC and beyond.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

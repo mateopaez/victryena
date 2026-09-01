@@ -8,7 +8,7 @@ export function AboutIntroSection() {
   const { intro } = aboutContent;
 
   return (
-    <section className="section-pad pt-20">
+    <section className="section-pad pt-10 sm:pt-14 lg:pt-20">
       <div className="site-wrap">
         <Eyebrow>{intro.eyebrow}</Eyebrow>
         <SplitLayout
@@ -19,7 +19,7 @@ export function AboutIntroSection() {
             />
           }
         >
-          <h2 className="mb-6 text-[40px] font-extrabold">{intro.title}</h2>
+          <h2 className="section-heading mb-6">{intro.title}</h2>
           {intro.paragraphs.map((paragraph) => (
             <p
               key={paragraph.slice(0, 40)}

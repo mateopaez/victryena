@@ -4,7 +4,7 @@ export function DiscountBanner() {
   const { discounts } = packagesContent;
 
   return (
-    <div className="my-10 flex flex-wrap items-center justify-between gap-x-8 gap-y-3 rounded-md border border-gold-soft bg-dark-soft px-9 py-6 max-xs:flex-col max-xs:items-start">
+    <div className="my-8 flex flex-col items-start gap-4 rounded-md border border-gold-soft bg-dark-soft px-5 py-5 sm:my-10 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-x-8 sm:gap-y-3 sm:px-9 sm:py-6">
       <div>
         <h3 className="text-lg leading-tight uppercase tracking-[0.04em]">
           {discounts.title}

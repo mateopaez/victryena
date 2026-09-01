@@ -12,7 +12,7 @@ export function BookingRequestSection() {
       media={<PlaceholderImage label={request.imageLabel} />}
     >
       <Eyebrow>{request.eyebrow}</Eyebrow>
-      <h2 className="mb-6 text-[40px] font-extrabold">{request.title}</h2>
+      <h2 className="section-heading mb-6">{request.title}</h2>
       <p className="mb-7 max-w-[520px] text-base font-light text-muted">
         {request.description}
       </p>

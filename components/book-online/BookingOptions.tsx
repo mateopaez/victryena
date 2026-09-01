@@ -6,11 +6,11 @@ export function BookingOptions() {
   const { options } = bookOnlineContent;
 
   return (
-    <div className="mb-[70px] grid grid-cols-2 gap-8 max-nav:grid-cols-1">
+    <div className="mb-12 grid grid-cols-1 gap-6 sm:mb-[70px] sm:gap-8 lg:grid-cols-2">
       {options.map((option) => (
         <div
           key={option.title}
-          className="rounded-md border border-white/15 p-9"
+          className="rounded-md border border-white/15 p-6 sm:p-9"
         >
           <Eyebrow>{option.eyebrow}</Eyebrow>
           <h3 className="mb-3 text-[22px] font-extrabold">{option.title}</h3>

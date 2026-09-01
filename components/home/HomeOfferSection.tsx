@@ -12,7 +12,7 @@ export function HomeOfferSection() {
       <div className="site-wrap">
         <SplitLayout media={<PlaceholderImage label={offer.imageLabel} />}>
           <Eyebrow>{offer.eyebrow}</Eyebrow>
-          <h2 className="mb-6 text-[40px] font-extrabold">{offer.title}</h2>
+          <h2 className="section-heading mb-6">{offer.title}</h2>
           <HighlightList items={highlightItems} />
           <p className="max-w-[520px] italic text-muted">
             &ldquo;{offer.quote}&rdquo;

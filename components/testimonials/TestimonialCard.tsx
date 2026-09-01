@@ -5,7 +5,7 @@ type TestimonialCardProps = {
 
 export function TestimonialCard({ name, quote }: TestimonialCardProps) {
   return (
-    <div className="rounded border border-white/8 bg-dark-soft p-8 text-left">
+    <div className="rounded border border-white/8 bg-dark-soft p-6 text-left sm:p-8">
       <div className="mb-2.5 text-4xl font-extrabold leading-none text-gold">
         &ldquo;
       </div>

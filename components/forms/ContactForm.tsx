@@ -12,7 +12,7 @@ export function ContactForm({ showPackageField = false }: ContactFormProps) {
         event.preventDefault();
       }}
     >
-      <div className="mb-2 grid grid-cols-2 gap-6 max-xs:grid-cols-1 max-xs:gap-0">
+      <div className="mb-2 grid grid-cols-1 gap-0 sm:grid-cols-2 sm:gap-6">
         <div className="mb-7">
           <label
             htmlFor="first-name"

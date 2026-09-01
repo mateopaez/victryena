@@ -15,16 +15,16 @@ export function PackagesPageContent() {
         title={banner.title}
         description={banner.description}
         tag={pricing.onlineTag}
-        className="bg-dark pb-10 pt-20 text-center"
+        className="bg-dark pb-8 pt-10 text-center sm:pb-10 sm:pt-14 lg:pt-20"
       />
 
-      <section className="pb-[100px] max-nav:pb-[72px]">
+      <section className="pb-14 sm:pb-16 lg:pb-[100px]">
         <div className="site-wrap">
           <PricingGrid />
           <DiscountBanner />
           <InPersonSessions />
 
-          <p className="mt-6 text-right text-[13px] italic text-muted">
+          <p className="mt-6 text-left text-[13px] italic text-muted sm:text-right">
             {pricing.priceNote}
           </p>
 

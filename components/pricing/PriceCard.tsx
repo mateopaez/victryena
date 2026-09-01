@@ -25,7 +25,7 @@ function FeatureText({ text }: { text: string }) {
 export function PriceCard({ tier }: PriceCardProps) {
   return (
     <div
-      className={`flex flex-col rounded-md border border-white/12 bg-purple px-8 py-10 text-center ${
+      className={`flex flex-col rounded-md border border-white/12 bg-purple px-6 py-8 text-center sm:px-8 sm:py-10 ${
         tier.featured
           ? "border-2 border-gold shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
           : ""
@@ -35,7 +35,7 @@ export function PriceCard({ tier }: PriceCardProps) {
       <div className="mb-[22px] text-sm font-normal italic text-muted">
         {tier.tagline}
       </div>
-      <div className="font-display text-5xl font-extrabold leading-none text-gold">
+      <div className="font-display text-[clamp(36px,8vw,48px)] font-extrabold leading-none text-gold">
         {tier.price}
       </div>
       <div className="my-2.5 text-xs uppercase tracking-[0.12em] text-muted">
