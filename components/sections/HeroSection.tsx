@@ -14,7 +14,8 @@ export function HeroSection() {
       <div className="site-wrap">
         <Eyebrow className="text-white opacity-85">{hero.eyebrow}</Eyebrow>
         <h1 className="mx-auto mb-7 max-w-[900px] text-[clamp(38px,5.6vw,68px)] leading-[1.08] tracking-[0.005em]">
-          {hero.headline}{" "}
+          {hero.headline}
+          <br />
           <span className="text-gold">{hero.headlineAccent}</span>
         </h1>
         <p className="mx-auto mb-8 max-w-[640px] text-base font-light text-muted sm:mb-10 sm:text-lg">

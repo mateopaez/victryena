@@ -9,7 +9,6 @@ export function IntroSection() {
   return (
     <section id="about" className="section-pad pt-10 sm:pt-14 lg:pt-20">
       <div className="site-wrap">
-        <Eyebrow>{intro.eyebrow}</Eyebrow>
         <SplitLayout
           media={
             <PlaceholderImage
@@ -18,6 +17,7 @@ export function IntroSection() {
             />
           }
         >
+          <Eyebrow>{intro.eyebrow}</Eyebrow>
           <h2 className="section-heading mb-6">{intro.title}</h2>
           {intro.paragraphs.map((paragraph) => (
             <p

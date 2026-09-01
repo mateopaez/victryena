@@ -133,14 +133,14 @@ export const howIWorkItems = [
 
 export const testimonials = [
   {
-    name: "Client Name",
+    name: "Hana",
     quote:
-      "This is your testimonial quote. Share a client's review of your training, coaching, or the space you've created for them.",
+      "Only bought the premium package hoping she would give me W faps, but instead of jacking off I got jacked. Would recommend?",
   },
   {
-    name: "Client Name",
+    name: "Shelby",
     quote:
-      "This is your testimonial quote. Share a client's review of your training, coaching, or the space you've created for them.",
+      "Vic is the best coach I've ever had. I've only ever had one coach though haha! She made me go from chopped asian to wasian baddie.",
   },
   {
     name: "Mateo",
@@ -152,8 +152,8 @@ export const testimonials = [
 export const siteContent = {
   hero: {
     eyebrow: "Certified Personal Trainer & Online Coach",
-    headline: "Feel At Home In Your",
-    headlineAccent: "Body",
+    headline: "Strong Bodies,",
+    headlineAccent: "Safe Spaces",
     subtext:
       "I work with gender-diverse folks who want to build strength, confidence, and a sense of autonomy. Personal training and gender-affirming programming, online or in person in Vancouver, BC.",
     primaryCta: { label: "View Packages", href: "#packages" },
