@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand colors */
+  --color-dark: #342935;
+  --color-dark-soft: #3f3240;
+  --color-purple: #5d3787;
+  --color-purple-light: #7a52a8;
+  --color-purple-dim: rgba(93, 55, 135, 0.55);
+  --color-gold: #f0c93e;
+  --color-gold-soft: rgba(240, 201, 62, 0.4);
+  --color-on-gold: #342935;
+  --color-muted: rgba(255, 255, 255, 0.78);
+
+  /* Typography */
+  --font-display: var(--font-montserrat), "Helvetica Neue", Arial, sans-serif;
+  --font-script: var(--font-caveat), cursive;
+  --font-body: var(--font-montserrat), "Helvetica Neue", Arial, sans-serif;
+
+  /* Layout */
+  --spacing-container: 2.5rem;
+  --spacing-container-nav: 1.75rem;
+  --width-site: 81.25rem;
+
+  /* Breakpoints matching the original mockup */
+  --breakpoint-nav: 61.25rem;
+  --breakpoint-xs: 37.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dark text-white font-body font-light leading-[1.55] antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-extrabold text-white m-0;
+  }
+
+  p {
+    @apply m-0;
+  }
+
+  a {
+    @apply text-inherit no-underline;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .site-wrap {
+    @apply mx-auto w-full max-w-(--width-site) px-(--spacing-container) max-nav:px-(--spacing-container-nav);
+  }
+
+  .section-pad {
+    @apply py-[100px] max-nav:py-[72px];
+  }
+
+  .hero-gradient {
+    background: linear-gradient(180deg, var(--color-purple) 0%, var(--color-dark) 100%);
+  }
+
+  .ph-img {
+    @apply relative flex w-full items-center justify-center overflow-hidden border border-purple-light;
+    background: linear-gradient(
+      135deg,
+      rgba(240, 201, 62, 0.14),
+      rgba(93, 55, 135, 0.4)
+    );
+  }
+
+  .ph-img::before {
+    content: "";
+    @apply absolute inset-0 opacity-60;
+    background-image:
+      linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.05) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba(255, 255, 255, 0.05) 75%
+      ),
+      linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.05) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba(255, 255, 255, 0.05) 75%
+      );
+    background-size: 28px 28px;
+    background-position:
+      0 0,
+      14px 14px;
+  }
+
+  .ph-img-label {
+    @apply relative z-[1] border border-gold-soft bg-[rgba(52,41,53,0.55)] px-4 py-2 text-center text-xs uppercase tracking-[0.14em] text-white opacity-80;
+    border-radius: 2px;
+  }
+
+  .tier-feature-list li {
+    @apply flex gap-2;
+  }
+
+  .tier-feature-list li::before {
+    content: "\2605";
+    @apply mt-[3px] shrink-0 text-xs text-gold;
+  }
+
+  .addon-list li::before {
+    content: "\2605";
+    @apply absolute left-0 top-1 text-xs text-gold;
+  }
 }
