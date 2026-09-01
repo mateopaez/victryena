@@ -22,7 +22,7 @@ export const STUDIO_LOCATION = "Vancouver, BC";
 
 export const navLinks = [
   { href: "#about", label: "About" },
-  { href: "#packages", label: "Packages" },
+  { href: "#packages", label: "Services" },
   { href: "#contact", label: "Get Started" },
 ] as const;
 
@@ -156,7 +156,7 @@ export const siteContent = {
     headlineAccent: "Safe Spaces",
     subtext:
       "I work with gender-diverse folks who want to build strength, confidence, and a sense of autonomy. Personal training and gender-affirming programming, online or in person in Vancouver, BC.",
-    primaryCta: { label: "View Packages", href: "#packages" },
+    primaryCta: { label: "View Services", href: "#packages" },
     secondaryCta: signUpCta,
   },
   intro: {
@@ -166,7 +166,7 @@ export const siteContent = {
       "I help gender-diverse people build strength, confidence, and autonomy through personal training and gender-affirming programming.",
       "The gym can feel like a lot. Whether you're cis or trans, you deserve to feel at home in your body. I meet you where you are, no judgment and no assumptions, just a plan that fits your body and your goals.",
     ],
-    link: { label: "See Training Packages", href: "#packages" },
+    link: { label: "See Training Services", href: "#packages" },
     imageLabel: "About Photo",
   },
   howIWork: {
