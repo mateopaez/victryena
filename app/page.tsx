@@ -1,23 +1,22 @@
 import { SiteShell } from "@/components/layout/SiteShell";
-import { HomeContactSection } from "@/components/home/HomeContactSection";
-import { HomeHero } from "@/components/home/HomeHero";
-import { HomeOfferSection } from "@/components/home/HomeOfferSection";
+import { ContactSection } from "@/components/sections/ContactSection";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { HowIWorkSection } from "@/components/sections/HowIWorkSection";
+import { IntroSection } from "@/components/sections/IntroSection";
+import { PackagesSection } from "@/components/sections/PackagesSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ValuesStrip } from "@/components/sections/ValuesStrip";
-import { TestimonialsSection } from "@/components/testimonials/TestimonialsSection";
-import { AboutIntroSection } from "@/components/about/AboutIntroSection";
-import { AboutHowIWorkSection } from "@/components/about/AboutHowIWorkSection";
-import { PackagesPageContent } from "@/components/packages/PackagesPageContent";
 
 export default function HomePage() {
   return (
     <SiteShell>
-      <HomeHero />
-      <AboutIntroSection />
-      <AboutHowIWorkSection /> 
+      <HeroSection />
+      <IntroSection />
+      <HowIWorkSection />
       <ValuesStrip />
-      <PackagesPageContent />
+      <PackagesSection />
       <TestimonialsSection />
-      <HomeContactSection />
+      <ContactSection />
     </SiteShell>
   );
 }

@@ -5,20 +5,20 @@ type PriceCardProps = {
 };
 
 function FeatureText({ text }: { text: string }) {
-  const underlined = ["Structured", "Limited", "Customized", "Direct", "Dynamic", "Priority"];
-  const match = underlined.find((word) => text.includes(word));
+  const highlighted = ["Structured", "Limited", "Customized", "Direct", "Dynamic", "Priority"];
+  const match = highlighted.find((word) => text.includes(word));
 
   if (!match) {
-    return <>{text}</>;
+    return <span>{text}</span>;
   }
 
   const parts = text.split(match);
   return (
-    <>
+    <span>
       {parts[0]}
-      <span className="underline decoration-gold">{match}</span>
+      <span className="font-medium">{match}</span>
       {parts[1]}
-    </>
+    </span>
   );
 }
 

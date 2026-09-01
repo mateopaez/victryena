@@ -1,9 +1,8 @@
+import { SocialIcons } from "@/components/layout/SocialIcons";
 import {
   CONTACT_EMAIL,
-  SOCIAL_HANDLE,
   STUDIO_LOCATION,
   STUDIO_NAME,
-  homeContent,
 } from "@/lib/content";
 
 export function ContactInfo() {
@@ -17,9 +16,7 @@ export function ContactInfo() {
       </div>
       <div className="flex flex-col gap-1 text-base sm:flex-row sm:gap-3.5">
         <span className="font-semibold text-gold sm:min-w-[90px]">Social</span>
-        <span>
-          {SOCIAL_HANDLE} {homeContent.contact.socialDetail}
-        </span>
+        <SocialIcons variant="hero" />
       </div>
       <div className="flex flex-col gap-1 text-base sm:flex-row sm:gap-3.5">
         <span className="font-semibold text-gold sm:min-w-[90px]">Studio</span>

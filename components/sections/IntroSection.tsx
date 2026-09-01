@@ -1,14 +1,13 @@
-import Link from "next/link";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { SplitLayout } from "@/components/ui/SplitLayout";
-import { aboutContent } from "@/lib/content";
+import { siteContent } from "@/lib/content";
 
-export function AboutIntroSection() {
-  const { intro } = aboutContent;
+export function IntroSection() {
+  const { intro } = siteContent;
 
   return (
-    <section className="section-pad pt-10 sm:pt-14 lg:pt-20">
+    <section id="about" className="section-pad pt-10 sm:pt-14 lg:pt-20">
       <div className="site-wrap">
         <Eyebrow>{intro.eyebrow}</Eyebrow>
         <SplitLayout
@@ -28,12 +27,12 @@ export function AboutIntroSection() {
               {paragraph}
             </p>
           ))}
-          <Link
+          <a
             href={intro.link.href}
             className="inline-block border-b border-gold pb-1 text-[15px] font-semibold tracking-[0.02em] text-gold"
           >
             {intro.link.label}
-          </Link>
+          </a>
         </SplitLayout>
       </div>
     </section>

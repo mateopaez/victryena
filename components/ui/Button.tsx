@@ -18,6 +18,10 @@ const sizeClasses: Record<ButtonSize, string> = {
   small: "h-[42px] px-[22px] text-[13px]",
 };
 
+function isExternalHref(href: string) {
+  return href.startsWith("http://") || href.startsWith("https://");
+}
+
 type ButtonProps = {
   href?: string;
   variant?: ButtonVariant;
@@ -38,6 +42,24 @@ export function Button({
   const classes = `inline-flex items-center justify-center whitespace-nowrap rounded-[3px] font-semibold tracking-[0.02em] transition-[background,color,opacity,border-color] duration-200 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   if (href) {
+    if (
+      isExternalHref(href) ||
+      href.startsWith("mailto:") ||
+      href.startsWith("#")
+    ) {
+      return (
+        <a
+          href={href}
+          className={classes}
+          {...(isExternalHref(href)
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} className={classes}>
         {children}

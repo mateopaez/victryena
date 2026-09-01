@@ -1,6 +1,6 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
-type PageBannerProps = {
+type SectionBannerProps = {
   eyebrow: string;
   title: string;
   description?: string;
@@ -8,18 +8,18 @@ type PageBannerProps = {
   className?: string;
 };
 
-export function PageBanner({
+export function SectionBanner({
   eyebrow,
   title,
   description,
   tag,
   className = "hero-gradient pb-6 pt-10 text-center sm:pb-[30px] sm:pt-14 lg:pt-20",
-}: PageBannerProps) {
+}: SectionBannerProps) {
   return (
-    <section className={className}>
+    <div className={className}>
       <div className="site-wrap">
         <Eyebrow>{eyebrow}</Eyebrow>
-        <h1 className="text-[clamp(34px,5vw,54px)] font-extrabold">{title}</h1>
+        <h2 className="text-[clamp(34px,5vw,54px)] font-extrabold">{title}</h2>
         {description ? (
           <p className="mx-auto mt-[22px] max-w-[680px] text-base font-light text-muted">
             {description}
@@ -31,6 +31,6 @@ export function PageBanner({
           </span>
         ) : null}
       </div>
-    </section>
+    </div>
   );
 }

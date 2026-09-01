@@ -1,4 +1,4 @@
-import { packagesContent } from "@/lib/content";
+import { siteContent } from "@/lib/content";
 
 type BundleItem = {
   text: string;
@@ -55,7 +55,7 @@ function DetailListItem({ item }: { item: DetailItem }) {
 }
 
 export function InPersonSessions() {
-  const { inPerson } = packagesContent;
+  const { inPerson } = siteContent.packages;
 
   return (
     <div className="rounded-md bg-purple p-6 sm:p-8 lg:p-11">
@@ -66,7 +66,7 @@ export function InPersonSessions() {
       </h2>
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[220px_1fr_1fr] lg:gap-10">
         <div className="rounded-md border border-gold-soft bg-dark p-6 text-center">
-          <div className="mb-2.5 text-[13px] text-muted underline underline-offset-[3px]">
+          <div className="mb-2.5 text-[13px] font-bold text-muted">
             {inPerson.sessionPrice.label}
           </div>
           <div className="font-display text-[40px] font-extrabold leading-none text-gold">

@@ -1,7 +1,7 @@
-import { packagesContent } from "@/lib/content";
+import { siteContent } from "@/lib/content";
 
 export function DiscountBanner() {
-  const { discounts } = packagesContent;
+  const { discounts } = siteContent.packages;
 
   return (
     <div className="my-8 flex flex-col items-start gap-4 rounded-md border border-gold-soft bg-dark-soft px-5 py-5 sm:my-10 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-x-8 sm:gap-y-3 sm:px-9 sm:py-6">

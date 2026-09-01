@@ -1,7 +1,30 @@
 export const CONTACT_EMAIL = "victryena@gmail.com";
+export const WAITLIST_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSeZoc0b4FUES48Au_MGQtFMqskBkKW9jueKqG0FAJMw0qGS5g/viewform";
+export const signUpCta = { label: "Sign Up Now", href: WAITLIST_FORM_URL };
 export const SOCIAL_HANDLE = "@victryena";
+export const socialLinks = [
+  {
+    href: "https://www.instagram.com/victryena/",
+    label: "Instagram",
+  },
+  {
+    href: "https://x.com/victryena",
+    label: "X (Twitter)",
+  },
+  {
+    href: "https://bsky.app/profile/victryena.bsky.social",
+    label: "Bluesky",
+  },
+] as const;
 export const STUDIO_NAME = "Trans First Fitness";
 export const STUDIO_LOCATION = "Vancouver, BC";
+
+export const navLinks = [
+  { href: "#about", label: "About" },
+  { href: "#packages", label: "Packages" },
+  { href: "#contact", label: "Get Started" },
+] as const;
 
 export type PricingTier = {
   name: string;
@@ -85,18 +108,7 @@ export const values = [
   },
 ];
 
-export const highlightItems = [
-  { bold: "One-on-one training", rest: "online & in-person" },
-  {
-    bold: "Individualized workout programs",
-    rest: "built around your goals",
-  },
-  { bold: "Nutrition guidance", rest: "& lifestyle coaching" },
-  { bold: "Queer & trans friendly gym", rest: "at Trans First Fitness" },
-  { bold: "Accessible, community-funded pricing" },
-];
-
-export const aboutHighlightItems = [
+export const howIWorkItems = [
   {
     bold: "One-on-one online & in-person training",
     rest: "wherever you feel most comfortable",
@@ -137,41 +149,16 @@ export const testimonials = [
   },
 ];
 
-export const homeContent = {
+export const siteContent = {
   hero: {
     eyebrow: "Certified Personal Trainer & Online Coach",
     headline: "Feel At Home In Your",
     headlineAccent: "Body",
     subtext:
       "I work with gender-diverse folks who want to build strength, confidence, and a sense of autonomy. Personal training and gender-affirming programming, online or in person in Vancouver, BC.",
-    primaryCta: { label: "View Packages", href: "/packages" },
-    secondaryCta: { label: "Book a Session", href: "/book-online" },
+    primaryCta: { label: "View Packages", href: "#packages" },
+    secondaryCta: signUpCta,
   },
-  offer: {
-    eyebrow: "What I Offer",
-    title: "Training Built Around You",
-    quote:
-      "Working out can feel intimidating. Whether you're cis or trans, everyone deserves to feel at home in their own body.",
-    imageLabel: "Training Photo",
-  },
-  contact: {
-    eyebrow: "Get In Touch",
-    title: "Start Your Journey Today",
-    description:
-      "Questions about packages, pricing, or what a session looks like? Send a message. I'd love to hear from you.",
-    imageLabel: "Studio Photo",
-    socialDetail: "on Instagram, X & Bluesky",
-  },
-};
-
-export const testimonialsContent = {
-  eyebrow: "Testimonials",
-  title: "What Clients Are Saying",
-  description:
-    "My goal is to help every client feel stronger, more confident, and more at home in their body. Here's what a few of them have shared.",
-};
-
-export const aboutContent = {
   intro: {
     eyebrow: "Who I Am",
     title: "Strength, Confidence & Autonomy",
@@ -179,105 +166,82 @@ export const aboutContent = {
       "I help gender-diverse people build strength, confidence, and autonomy through personal training and gender-affirming programming.",
       "The gym can feel like a lot. Whether you're cis or trans, you deserve to feel at home in your body. I meet you where you are, no judgment and no assumptions, just a plan that fits your body and your goals.",
     ],
-    link: { label: "See Training Packages", href: "/packages" },
+    link: { label: "See Training Packages", href: "#packages" },
     imageLabel: "About Photo",
   },
   howIWork: {
     eyebrow: "How I Work",
     title: "A Practice Built On Inclusion",
   },
-  cta: {
-    title: "Ready to get started?",
-    primaryCta: { label: "View Packages", href: "/packages" },
-    secondaryCta: { label: "Book a Session", href: "/book-online" },
-  },
-};
-
-export const packagesContent = {
-  banner: {
-    eyebrow: "Services",
-    title: "Personal Training Packages",
-    description:
-      "Every package is coaching from me: personalized, gender-affirming, and priced to stay as accessible as I can make it. Pick the level of support that fits where you're at.",
-  },
-  pricing: {
-    onlineTag: "Online Available",
-    priceNote: "*Prices in USD and current as of August 2026.",
-    bookCta: { label: "Book Now", href: "/book-online" },
-  },
-  discounts: {
-    title: "Committment Discounts",
-    note: "*Monthly Payment Plan Available",
-    tiers: [
-      { duration: "3 Months", discount: "10% OFF" },
-      { duration: "6 Months", discount: "25% OFF" },
-    ],
-  },
-  inPerson: {
-    title: "Additional",
-    titleAccent: "In-Person",
-    titleSuffix: "Sessions",
-    sessionPrice: {
-      label: "Individual",
-      price: "$50",
-      period: "Per Session",
-    },
-    bundles: [
-      {
-        text: "Bring-A-Friend*:",
-        highlight: "$30",
-        suffix: "ea",
-        fine: "*the friend must also be a client",
-      },
-      { text: "4 Session Bundle:", highlight: "10% OFF" },
-      { text: "8 Session Bundle:", highlight: "25% OFF" },
-      { text: "Additional bundles available." },
-    ],
-    details: [
-      {
-        text: "Located at",
-        highlight: "Trans First Fitness",
-        suffix: "*",
-        fine: "*gym membership is covered during our sessions",
-      },
-      {
-        text: "Available to residents in",
-        highlight: "Vancouver, BC",
-      },
-      { text: "Guided Workouts & Real-Time Support" },
-      { text: "Trans & Queer Friendly Environment" },
-    ],
-  },
-};
-
-export const bookOnlineContent = {
-  banner: {
-    eyebrow: "Book Online",
-    title: "Ready To Train?",
-    description:
-      "Tell me which package or session you're interested in and I'll follow up to find a time that works, online or in person at Trans First Fitness in Vancouver, BC.",
-  },
-  options: [
-    {
-      eyebrow: "Online Coaching",
-      title: "Monthly Packages",
+  packages: {
+    banner: {
+      eyebrow: "Services",
+      title: "Personal Training Packages",
       description:
-        "Basic, Standard, and Premium coaching with individualized programming, check-ins, and messaging support. Train from anywhere.",
-      cta: { label: "View Packages", href: "/packages" },
+        "Every package is coaching from me: personalized, gender-affirming, and priced to stay as accessible as I can make it. Pick the level of support that fits where you're at.",
     },
-    {
-      eyebrow: "In-Person",
-      title: "Single Sessions",
-      description:
-        "$50 per session at Trans First Fitness in Vancouver, BC. Gym membership is covered while we're training together. Bundles available.",
-      cta: { label: "See Session Pricing", href: "/packages" },
+    pricing: {
+      onlineTag: "Online Available",
+      priceNote: "*Prices in USD and current as of August 2026.",
+      signUpCta,
     },
-  ],
-  request: {
-    eyebrow: "Request A Booking",
-    title: "Tell Me About Your Goals",
+    discounts: {
+      title: "Committment Discounts",
+      note: "*Monthly Payment Plan Available",
+      tiers: [
+        { duration: "3 Months", discount: "10% OFF" },
+        { duration: "6 Months", discount: "25% OFF" },
+      ],
+    },
+    inPerson: {
+      title: "Additional",
+      titleAccent: "In-Person",
+      titleSuffix: "Sessions",
+      sessionPrice: {
+        label: "Individual",
+        price: "$50",
+        period: "Per Session",
+      },
+      bundles: [
+        {
+          text: "Bring-A-Friend*:",
+          highlight: "$30",
+          suffix: " ea",
+          fine: "*the friend must also be a client",
+        },
+        { text: "4 Session Bundle:", highlight: "10% OFF" },
+        { text: "8 Session Bundle:", highlight: "25% OFF" },
+        { text: "Additional bundles available." },
+      ],
+      details: [
+        {
+          text: "Located at",
+          highlight: "Trans First Fitness",
+          suffix: "*",
+          fine: "*gym membership is covered during our sessions",
+        },
+        {
+          text: "Available to residents in",
+          highlight: "Vancouver, BC",
+        },
+        { text: "Guided Workouts & Real-Time Support" },
+        { text: "Trans & Queer Friendly Environment" },
+      ],
+    },
+  },
+  testimonials: {
+    eyebrow: "Testimonials",
+    title: "What Clients Are Saying",
     description:
-      "Share a little about what you're looking for and I'll get back to you to confirm a package and schedule.",
+      "My goal is to help every client feel stronger, more confident, and more at home in their body. Here's what a few of them have shared.",
+  },
+  contact: {
+    eyebrow: "Get In Touch",
+    title: "Have Questions?",
+    description: [
+      "Want to know more about packages, pricing, or what coaching looks like? Send me an email.",
+      "Ready to start your fitness journey? Sign up and I'll reach out when a spot opens up.",
+    ],
     imageLabel: "Studio Photo",
   },
 };

@@ -1,15 +1,15 @@
-import { ContactForm } from "@/components/forms/ContactForm";
 import { ContactInfo } from "@/components/sections/ContactInfo";
+import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { SplitLayout } from "@/components/ui/SplitLayout";
-import { homeContent } from "@/lib/content";
+import { signUpCta, siteContent } from "@/lib/content";
 
-export function HomeContactSection() {
-  const { contact } = homeContent;
+export function ContactSection() {
+  const { contact } = siteContent;
 
   return (
-    <section className="section-pad">
+    <section id="contact" className="section-pad">
       <div className="site-wrap">
         <SplitLayout
           gap="compact"
@@ -22,11 +22,17 @@ export function HomeContactSection() {
         >
           <Eyebrow>{contact.eyebrow}</Eyebrow>
           <h2 className="section-heading mb-4">{contact.title}</h2>
-          <p className="mb-9 max-w-[460px] text-base font-light text-muted">
-            {contact.description}
-          </p>
+          <div className="mb-9 max-w-[460px] text-base font-light text-muted">
+            {contact.description.map((paragraph) => (
+              <p key={paragraph.slice(0, 32)} className="mb-4 last:mb-0">
+                {paragraph}
+              </p>
+            ))}
+          </div>
           <ContactInfo />
-          <ContactForm />
+          <Button href={signUpCta.href} className="mt-9">
+            {signUpCta.label}
+          </Button>
         </SplitLayout>
       </div>
     </section>

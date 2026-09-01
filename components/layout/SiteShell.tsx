@@ -5,13 +5,12 @@ import { SiteHeader } from "./SiteHeader";
 
 type SiteShellProps = {
   children: ReactNode;
-  headerAction?: "book" | "email";
 };
 
-export function SiteShell({ children, headerAction = "book" }: SiteShellProps) {
+export function SiteShell({ children }: SiteShellProps) {
   return (
     <>
-      <SiteHeader action={headerAction} />
+      <SiteHeader />
       <PrideBanner />
       <main>{children}</main>
       <SiteFooter />

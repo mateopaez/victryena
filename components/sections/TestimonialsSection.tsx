@@ -1,8 +1,8 @@
-import { testimonials, testimonialsContent } from "@/lib/content";
-import { TestimonialCard } from "./TestimonialCard";
+import { TestimonialCard } from "@/components/sections/TestimonialCard";
+import { siteContent, testimonials } from "@/lib/content";
 
 export function TestimonialsSection() {
-  const { eyebrow, title, description } = testimonialsContent;
+  const { eyebrow, title, description } = siteContent.testimonials;
 
   return (
     <section className="text-center">
