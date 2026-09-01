@@ -114,6 +114,11 @@
     @apply mt-[3px] shrink-0 text-xs text-gold;
   }
 
+  .tier-feature-list li.tier-feature-addon::before {
+    content: "+";
+    @apply mt-0 text-sm font-extrabold;
+  }
+
   .addon-list li::before {
     content: "\2605";
     @apply absolute left-0 top-1 text-xs text-gold;

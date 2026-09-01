@@ -58,7 +58,7 @@ export function InPersonSessions() {
   const { inPerson } = packagesContent;
 
   return (
-    <div className="mt-[60px] rounded-md bg-purple p-11">
+    <div className="rounded-md bg-purple p-11">
       <h2 className="mb-8 text-[26px] font-extrabold">
         {inPerson.title}{" "}
         <span className="text-gold">{inPerson.titleAccent}</span>{" "}

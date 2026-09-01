@@ -14,19 +14,12 @@ export function PackagesPageContent() {
         eyebrow={banner.eyebrow}
         title={banner.title}
         description={banner.description}
+        tag={pricing.onlineTag}
+        className="bg-dark pb-10 pt-20 text-center"
       />
 
-      <section className="pt-[60px] pb-[100px] max-nav:pb-[72px]">
+      <section className="pb-[100px] max-nav:pb-[72px]">
         <div className="site-wrap">
-          <div className="mb-14 text-center">
-            <h1 className="inline-block text-[clamp(28px,4vw,48px)] font-extrabold">
-              {pricing.title}{" "}
-              <span className="ml-3.5 inline-block rounded border-[1.5px] border-gold px-3 py-1.5 align-middle text-[15px] font-extrabold uppercase tracking-[0.06em] text-gold max-xs:mx-auto max-xs:mt-3.5 max-xs:block max-xs:w-fit">
-                {pricing.onlineTag}
-              </span>
-            </h1>
-          </div>
-
           <PricingGrid />
           <DiscountBanner />
           <InPersonSessions />
@@ -35,7 +28,7 @@ export function PackagesPageContent() {
             {pricing.priceNote}
           </p>
 
-          <div className="mt-[60px] text-center">
+          <div className="mt-8 text-center">
             <Button href={pricing.bookCta.href} variant="outline">
               {pricing.bookCta.label}
             </Button>
@@ -44,4 +37,4 @@ export function PackagesPageContent() {
       </section>
     </>
   );
-}
+}2

@@ -25,9 +25,9 @@ function FeatureText({ text }: { text: string }) {
 export function PriceCard({ tier }: PriceCardProps) {
   return (
     <div
-      className={`flex flex-col rounded-md border border-white/12 bg-purple px-8 py-10 text-center max-nav:transform-none ${
+      className={`flex flex-col rounded-md border border-white/12 bg-purple px-8 py-10 text-center ${
         tier.featured
-          ? "-translate-y-2.5 border-2 border-gold shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
+          ? "border-2 border-gold shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
           : ""
       }`}
     >
@@ -45,11 +45,19 @@ export function PriceCard({ tier }: PriceCardProps) {
         {tier.description}
       </div>
       <ul className="tier-feature-list mb-5 flex grow flex-col gap-2.5 border-t border-white/20 pt-5 text-left">
-        {tier.features.map((feature) => (
-          <li key={feature} className="flex gap-2 text-sm text-white">
-            <FeatureText text={feature} />
-          </li>
-        ))}
+        {tier.features.map((feature) => {
+          const isAddon = feature.startsWith("+ ");
+          const text = isAddon ? feature.slice(2) : feature;
+
+          return (
+            <li
+              key={feature}
+              className={`flex gap-2 text-sm text-white${isAddon ? " tier-feature-addon" : ""}`}
+            >
+              <FeatureText text={text} />
+            </li>
+          );
+        })}
       </ul>
       <div className="border-t border-white/20 pt-[18px] text-left text-[13px] text-muted">
         {"supported" in tier.rates ? (
