@@ -5,7 +5,7 @@ export function TestimonialsSection() {
   const { eyebrow, title, description } = testimonialsContent;
 
   return (
-    <section className="section-pad text-center">
+    <section className="text-center">
       <div className="site-wrap">
         <div className="mx-auto mb-10 max-w-[720px] sm:mb-[70px]">
           <span className="mb-[18px] block text-sm font-semibold uppercase tracking-[0.18em] opacity-85">

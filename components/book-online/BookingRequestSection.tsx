@@ -9,7 +9,12 @@ export function BookingRequestSection() {
 
   return (
     <SplitLayout
-      media={<PlaceholderImage label={request.imageLabel} />}
+      media={
+        <PlaceholderImage
+          label={request.imageLabel}
+          className="aspect-[4/5]"
+        />
+      }
     >
       <Eyebrow>{request.eyebrow}</Eyebrow>
       <h2 className="section-heading mb-6">{request.title}</h2>

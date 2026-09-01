@@ -29,7 +29,7 @@ export function PackagesPageContent() {
           </p>
 
           <div className="mt-8 text-center">
-            <Button href={pricing.bookCta.href} variant="outline">
+            <Button href={pricing.bookCta.href}>
               {pricing.bookCta.label}
             </Button>
           </div>

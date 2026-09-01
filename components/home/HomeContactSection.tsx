@@ -13,7 +13,12 @@ export function HomeContactSection() {
       <div className="site-wrap">
         <SplitLayout
           gap="compact"
-          media={<PlaceholderImage label={contact.imageLabel} />}
+          media={
+            <PlaceholderImage
+              label={contact.imageLabel}
+              className="aspect-[4/5]"
+            />
+          }
         >
           <Eyebrow>{contact.eyebrow}</Eyebrow>
           <h2 className="section-heading mb-4">{contact.title}</h2>

@@ -20,7 +20,7 @@ export function SiteFooter() {
               Victryena
             </Link>
             <p className="text-[15px] text-muted">
-              Certified Personal Trainer & Online Coach
+              Certified Personal Trainer & Lover of Feet
             </p>
           </div>
 
