@@ -50,7 +50,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
                   >
                     ♡
                   </span>
-                  <span className="text-[clamp(22px,6vw,28px)] font-extrabold leading-none tracking-[0.01em] transition-colors group-hover:text-gold">
+                  <span className="text-[clamp(16px,4.5vw,20px)] font-extrabold leading-none tracking-[0.01em] transition-colors group-hover:text-gold">
                     {label}
                   </span>
                 </a>
