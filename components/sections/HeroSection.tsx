@@ -8,7 +8,6 @@ export function HeroSection() {
 
   return (
     <section
-      id="top"
       className="hero-gradient px-0 pt-10 pb-12 text-center sm:py-16 lg:py-[90px]"
     >
       <div className="site-wrap">

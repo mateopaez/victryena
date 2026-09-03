@@ -19,11 +19,27 @@
 
   /* Layout */
   --width-site: 81.25rem;
+  --header-height: 4rem;
+  --header-height-lg: 5.625rem;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+  }
+
+  #about,
+  #packages,
+  #contact {
+    scroll-margin-top: var(--header-height);
+  }
+
+  @media (min-width: 1024px) {
+    #about,
+    #packages,
+    #contact {
+      scroll-margin-top: var(--header-height-lg);
+    }
   }
 
   body {

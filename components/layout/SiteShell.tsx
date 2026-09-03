@@ -10,6 +10,7 @@ type SiteShellProps = {
 export function SiteShell({ children }: SiteShellProps) {
   return (
     <>
+      <div id="top" aria-hidden="true" />
       <SiteHeader />
       <PrideBanner />
       <main>{children}</main>
